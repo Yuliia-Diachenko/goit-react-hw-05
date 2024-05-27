@@ -1,9 +1,4 @@
-.container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-.font {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+.header {
+    box-shadow: 10px 5px 5px black;
+    margin-bottom: 20px;
 }

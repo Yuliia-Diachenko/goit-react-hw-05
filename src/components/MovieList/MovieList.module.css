@@ -1,0 +1,9 @@
+.list {
+    list-style-type: square;
+  
+}
+.link {
+    text-decoration: none;
+    color: rgb(39, 25, 25);    
+    
+}

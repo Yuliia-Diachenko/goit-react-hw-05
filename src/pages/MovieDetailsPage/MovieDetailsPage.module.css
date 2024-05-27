@@ -1,0 +1,33 @@
+.goBackLink {
+    border: 1 solid;
+    border-radius: 4px;
+    text-decoration: none;
+    color: rgb(39, 25, 25);  
+    background: linear-gradient(90deg, rgba(0,0,0,1) 3%, rgba(255,255,255,1) 99%);
+    color: brown;
+    padding: 4px;
+    align-items: baseline;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.detailsPage {
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+    max-width: 800px;    
+    background: linear-gradient(90deg, rgb(19, 18, 18) 3%, rgba(255,255,255,1) 99%);
+      
+      
+}
+.img {
+    max-width: 300px;
+}
+.additional {
+    margin-left: 20px;
+}

@@ -1,0 +1,19 @@
+.item {
+    margin-bottom: 16px;
+  }
+  .icon {
+    margin-right: 6px;
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .content {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    max-width: 1200px;
+    padding: 20px;
+  }
+ 
