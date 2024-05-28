@@ -1,15 +1,16 @@
-import { useSearchParams, useLocation, Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getMovieSearch } from "../../movies-api";
 import NavLink from "../../components/NavLink/NavLink";
 import Loader from "../../components/Loader/Loader";
 import css from "./MoviesPage.module.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
+import MovieList from "../../components/MovieList/MovieList";
 
 
 
 export default function MoviesPage() {
-  const location = useLocation();
+  // const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get("movieName") ?? "";
   const [moviesList, setMoviesList] = useState([]);
@@ -39,6 +40,7 @@ export default function MoviesPage() {
         setIsError(true);
       } finally {
         setLoading(false);
+        setIsError(false);
       }
     };
     getMovieByKeyword(movieName);
@@ -54,8 +56,9 @@ export default function MoviesPage() {
   return (
     <main className="container">
       <div className={css.moviesPage}>
-        <NavLink onSubmit={handleSubmit} />        
-        <ul className={css.movieList}>
+        <NavLink onSubmit={handleSubmit} /> 
+        <MovieList movies={moviesList}/>       
+        {/* <ul className={css.movieList}>
           {moviesList.map((movie) => {
             return (
               <li key={movie.id}>
@@ -67,10 +70,10 @@ export default function MoviesPage() {
                 </Link>
               </li>
             );
-          })}
+          })} */}
           {isError && <ErrorMessage />}
           {loading && <Loader />}
-        </ul>
+        {/* </ul> */}
       </div>
     </main>
   );

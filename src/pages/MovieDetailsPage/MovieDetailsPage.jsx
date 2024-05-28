@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useLocation, Link, Outlet } from "react-router-dom";
-// import toast from "react-hot-toast";
+
 import {fetchMovieDetails} from '../../movies-api';
 import css from './MovieDetailsPage.module.css';
 import { SlActionUndo } from "react-icons/sl";

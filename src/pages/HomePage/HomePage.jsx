@@ -10,10 +10,10 @@ export default function HomePage() {
   const [loading, setLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   useEffect(() => {
-    if (!trendMovies) {
-      setIsError(true);
-      return;
-    }
+    // if (!trendMovies) {
+    //   setIsError(true);
+    //   return;
+    // }
     async function getTrendMovies() {
       setLoading(true);
       setIsError(false);
