@@ -39,8 +39,7 @@ export default function MoviesPage() {
       } catch (error) {
         setIsError(true);
       } finally {
-        setLoading(false);
-        setIsError(false);
+        setLoading(false);        
       }
     };
     getMovieByKeyword(movieName);
