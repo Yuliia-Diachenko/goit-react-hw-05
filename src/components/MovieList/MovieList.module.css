@@ -1,9 +1,11 @@
 .list {
-    list-style-type: square;
+    list-style-type: none;
   
 }
 .link {
     text-decoration: none;
-    color: rgb(39, 25, 25);    
+    color: rgb(45, 35, 35);   
+    font-family: fantasy; 
+    font-size: 24px;
     
 }

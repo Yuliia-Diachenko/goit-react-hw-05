@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
+import { FcHome } from "react-icons/fc";
 import css from './Navigation.module.css';
 
 const getLinkClass = ({ isActive }) => {
@@ -13,7 +14,7 @@ export default function Navigation() {
         <ul className={css.container}>
           <li>
             <NavLink to="/" className={getLinkClass}>
-              Home
+            <FcHome />
             </NavLink>
           </li>
           <li>

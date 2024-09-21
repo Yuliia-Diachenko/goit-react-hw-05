@@ -53,26 +53,12 @@ export default function MoviesPage() {
   };
 
   return (
-    <main className="container">
+    <main className={css.container}>
       <div className={css.moviesPage}>
         <NavLink onSubmit={handleSubmit} /> 
         <MovieList movies={moviesList}/>       
-        {/* <ul className={css.movieList}>
-          {moviesList.map((movie) => {
-            return (
-              <li key={movie.id}>
-                <Link
-                  to={`/movies/${movie.id}`}
-                  state={{ from: location }}
-                  className={css.link}>
-                  {movie.original_title || movie.name}
-                </Link>
-              </li>
-            );
-          })} */}
           {isError && <ErrorMessage />}
           {loading && <Loader />}
-        {/* </ul> */}
       </div>
     </main>
   );

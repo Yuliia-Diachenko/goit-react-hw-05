@@ -1,4 +1,6 @@
 import css from './NavLink.module.css';
+import { FaSearch } from "react-icons/fa";
+
 export default function NavLink({onSubmit}) {
     return(
         <form onSubmit={onSubmit} className={css.form}>
@@ -13,7 +15,7 @@ export default function NavLink({onSubmit}) {
           className={css.input}
         />
         <button type="submit" className={css.btnSearch}>
-          Search
+        <FaSearch /> Search
         </button>
       </form>
     )

@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useParams, useLocation, Link, Outlet } from "react-router-dom";
-
 import {fetchMovieDetails} from '../../movies-api';
 import css from './MovieDetailsPage.module.css';
 import { SlActionUndo } from "react-icons/sl";
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
-
 
   export default function MovieDetailsPage() {
     const [movieDetails, setMovieDetails] = useState({});
@@ -30,10 +28,8 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
     const scoreToFixed = Number(vote_average).toFixed(2);
   
     return (
-      
-        <div >          
+          <div className={css.container} >          
           <Link to={location.state?.from ?? "/"} className={css.goBackLink}>
-            {/* <IoArrowBackCircleOutline className={css.icon} /> */}
             <SlActionUndo />Go back
           </Link>
           {isError&&<ErrorMessage />}
@@ -48,7 +44,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
               alt="Movie poster"
               className={css.img}
             />
-            <div>
+            <div className={css.about}>
               <h1>{original_title}</h1>
               <p>User score: {scoreToFixed}</p>
               <h2>Overview</h2>
@@ -59,9 +55,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
                   genres.length &&
                   genres.map(({ id, name }) => <li key={id}>{name}</li>)}
               </ul>
-            </div>
-          </div>
-          <hr />
+            </div></div>
           <div className={css.additional}>
             <h3 className={css.addInfoTitle}>Additional information</h3>
             <ul className={css.infoList}>
@@ -87,9 +81,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
             </ul>
             <hr />
           </div>
-          {/* <Suspense fallback={<Loader />}> */}
             <Outlet />
-          {/* </Suspense> */}
         </div>
       
     );

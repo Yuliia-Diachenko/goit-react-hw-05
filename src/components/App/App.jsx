@@ -19,11 +19,9 @@ import css from './App.module.css';
 
 export default function App() {
   return (
-    <div className={css.container}>
-      <header className={css.header}>
-        <Navigation />        
-      </header>
-      <Suspense fallback={<Loader />}>
+    <div className={css.container}>   
+        <Navigation />
+        <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<MoviesPage />} />
@@ -33,7 +31,7 @@ export default function App() {
           </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
-      </Suspense>
+        </Suspense>
     </div>
   );
 }
